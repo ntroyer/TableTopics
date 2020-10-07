@@ -1,5 +1,7 @@
 <input matInput placeholder="Participant's name">
+<div class="timer">{{currentTimeString}}</div>
 <button (click)="showQuestion()">{{hasQuestion() ? "Change Question" : "Reveal Question"}}</button>
+<button (click)="toggleTimer()">{{isTimerOn() ? "Stop Timer" : "Start Timer"}}</button>
 <button (click)="newPlayer()">New Participant</button>
 <button (click)="finish()">Finish</button>
 <div *ngIf="hasQuestion()">{{currentQuestionObj.question}}</div>

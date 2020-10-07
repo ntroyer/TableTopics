@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 // todo - eventually, we will want to load the questions from a database in the backend, maybe...
-import * as questions from '../questions/questions.json';
+import questions from '../questions/questions.json';
 
 interface Question {
-  question: String;
-  topic: String;
+  question: string;
+  topic: string;
 }
 
 interface Player {
@@ -19,9 +19,12 @@ interface Player {
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit {
-  questions: Question[] = questions.default;
-
+  public gameQuestions: Question[] = questions;
   public currentQuestionObj: Question;
+  public timerOn = false;
+  public currentTime = 0;
+  public currentTimeString: string;
+  public interval: any;
 
   constructor() { }
 
@@ -29,7 +32,7 @@ export class GameComponent implements OnInit {
   }
 
   showQuestion() {
-    const randomQuestion = this.questions[Math.floor(Math.random() * this.questions.length)];
+    const randomQuestion = this.gameQuestions[Math.floor(Math.random() * this.gameQuestions.length)];
     this.currentQuestionObj = randomQuestion;
   }
 
@@ -43,6 +46,26 @@ export class GameComponent implements OnInit {
 
   finish() {
     console.log('finish!!!');
+  }
+
+  toggleTimer() {
+    this.timerOn = !this.timerOn;
+
+    if (this.timerOn) {
+      this.interval = setInterval(() => {
+        this.currentTime++;
+        const minutes = Math.floor(this.currentTime / (100 * 60));
+        const seconds = Math.floor((this.currentTime - minutes * 100 * 60) / 100);
+        const fract = Math.floor((this.currentTime - minutes * 100 * 60 - seconds * 100));
+        this.currentTimeString = (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds + ":" + (fract < 10 ? "0" : "") + fract;
+      }, 10);
+    } else {
+      clearInterval(this.interval);
+    }
+  }
+
+  isTimerOn() {
+    return this.timerOn;
   }
 
 
