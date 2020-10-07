@@ -1,0 +1,42 @@
+[
+    {
+        "question": "Do you think people who have pets live longer than people who don't have pets? Why?",
+        "topic": "animals"
+    },
+    {
+        "question": "Are there any animals that makes you uncomfortable?",
+        "topic": "animals"
+    },
+    {
+        "question": "Is a dog really man's best friend?",
+        "topic": "animals"
+    },
+    {
+        "question": "What is the worst possible pet a person could have?",
+        "topic": "animals"
+    },
+    {
+        "question": "What is art?",
+        "topic": "art"
+    },
+    {
+        "question": "Tell us about your favorite artist.",
+        "topic": "art"
+    },
+    {
+        "question": "Do you have any bad habits? Would you care to share them with us?",
+        "topic": "badhabits"
+    },
+    {
+        "question": "What's the best way to break a bad habit?",
+        "topic": "badhabits"
+    },
+    {
+        "question": "Who is your favorite author? What do you like about their writing?",
+        "topic": "books"
+    },
+    {
+        "question": "If your life was a book, what book would it be?",
+        "topic": "books"
+    }
+]

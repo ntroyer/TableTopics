@@ -1,1 +1,5 @@
-<p>game works!</p>
+<input matInput placeholder="Participant's name">
+<button (click)="showQuestion()">{{hasQuestion() ? "Change Question" : "Reveal Question"}}</button>
+<button (click)="newPlayer()">New Participant</button>
+<button (click)="finish()">Finish</button>
+<div *ngIf="hasQuestion()">{{currentQuestionObj.question}}</div>
