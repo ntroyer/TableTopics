@@ -27,6 +27,7 @@ export class GameComponent implements OnInit {
   public currentTimeString = '00:00:00';
   public interval: any;
   name = '';
+  timerHidden = false;
   players: Player[] = [];
 
   constructor() { }
@@ -93,12 +94,20 @@ export class GameComponent implements OnInit {
     this.currentTimeString = '00:00:00';
   }
 
+  toggleShowTimer() {
+    this.timerHidden = !this.timerHidden;
+  }
+
+  isTimerHidden() {
+    return this.timerHidden;
+  }
+
   isTimerOn() {
     return this.timerOn;
   }
 
   hasTime() {
-    return this.currentTimeString !== '00:00:00';
+    return this.currentTime !== 0;
   }
 
 }

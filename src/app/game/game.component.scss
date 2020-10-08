@@ -1,0 +1,28 @@
+.timer-control {
+    .timer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8vw;
+    }
+    .timer-buttons {
+        display: flex;
+        justify-content: center;
+
+        button {
+            margin: 3px 0;
+        }
+    }
+}
+
+.player-control {
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        background-color: wheat;
+        border-radius: 5px;
+        margin: 10px auto;
+    }
+}

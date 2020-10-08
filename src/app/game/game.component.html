@@ -1,16 +1,35 @@
 <h4>Enter the participant's name to begin</h4>
-<input matInput placeholder="Participant's name" [(ngModel)]="name" [disabled]="hasQuestion()">
-<div class="timer">{{currentTimeString}}</div>
-<button (click)="showQuestion()" [disabled]="name === ''">{{hasQuestion() ? "Change Question" : "Reveal Question"}}</button>
-<button (click)="toggleTimer()" [disabled]="!hasQuestion()">{{isTimerOn() ? "Stop Timer" : "Start Timer"}}</button>
-<button (click)="resetTimer()" [disabled]="!hasQuestion() || !hasTime() || isTimerOn()">Reset Timer</button>
-<button (click)="newPlayer()" [disabled]="!hasQuestion() || isTimerOn()">New Participant</button>
-<button (click)="finish()" [disabled]="!hasQuestion() || isTimerOn()">Finish</button>
-<div *ngIf="hasQuestion()">{{currentQuestionObj.question}}</div>
-<ul>
-    <li *ngFor="let player of players; index as i;">
-        <div>{{player.name}}</div>
-        <div>{{player.question.question}}</div>
-        <div>{{player.time !== '00:00:00' ? player.time : '-Time Not Tracked-'}}</div>
-    </li>
-</ul>
+<div class="name-control">
+    <input placeholder="Name" [(ngModel)]="name" [disabled]="hasQuestion()">
+</div>
+<div class="question-control">
+    <button mat-button (click)="showQuestion()" [disabled]="name === ''">{{hasQuestion() ? "Change Question" : "Reveal Question"}}</button>
+    <mat-card *ngIf="hasQuestion()">
+        <h1>
+            {{currentQuestionObj.question}}
+        </h1>
+    </mat-card>
+</div>
+<div class="timer-control">
+    <div class="timer">
+        <h1>
+            {{isTimerHidden() ? "??:??:??" : currentTimeString}}
+        </h1>
+    </div>
+    <div class="timer-buttons">
+        <button mat-button (click)="toggleShowTimer()" [disabled]="!hasQuestion()">{{isTimerHidden() ? "Show Timer" : "Hide Timer"}}</button>
+        <button mat-button (click)="toggleTimer()" [disabled]="!hasQuestion()">{{isTimerOn() ? "Stop Timer" : "Start Timer"}}</button>
+        <button mat-button (click)="resetTimer()" [disabled]="!hasQuestion() || !hasTime() || isTimerOn()">Reset Timer</button>
+    </div>
+</div>
+<div class="player-control">
+    <button mat-button (click)="newPlayer()" [disabled]="!hasQuestion() || isTimerOn()">New Participant</button>
+    <button mat-button (click)="finish()" [disabled]="!hasQuestion() || isTimerOn()">Finish</button>
+    <ul>
+        <li *ngFor="let player of players; index as i;">
+            <div>{{player.name}}</div>
+            <div>{{player.question.question}}</div>
+            <div *ngIf="player.time !== '00:00:00'">{{player.time}}</div>
+        </li>
+    </ul>
+</div>
