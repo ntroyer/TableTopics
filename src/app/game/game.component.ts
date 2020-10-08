@@ -10,6 +10,7 @@ interface Question {
 interface Player {
   name: string;
   question: Question;
+  time: string;
   answer: string;
 }
 
@@ -25,6 +26,8 @@ export class GameComponent implements OnInit {
   public currentTime = 0;
   public currentTimeString: string;
   public interval: any;
+  name = '';
+  players: Player[] = [];
 
   constructor() { }
 
@@ -37,14 +40,40 @@ export class GameComponent implements OnInit {
   }
 
   hasQuestion() {
-    return typeof this.currentQuestionObj !== 'undefined';
+    return typeof this.currentQuestionObj !== 'undefined' && this.currentQuestionObj.question !== '';
   }
 
   newPlayer() {
+    // this will end the current player's session and start a new player
+    
+    this.finishCurrentPlayer();
+    this.startNewPlayer();
+  }
+
+  private finishCurrentPlayer() {
     console.log('newPlayer');
+    const player: Player = {
+      name: this.name,
+      question: this.currentQuestionObj,
+      time: this.currentTimeString,
+      answer: ''
+    }
+    this.players.push(player);
+  }
+
+  private startNewPlayer() {
+    this.currentQuestionObj = {
+      question: '',
+      topic: ''
+    };
+    this.timerOn = false;
+    this.currentTime = 0;
+    this.currentTimeString = '';
+    this.name = '';
   }
 
   finish() {
+    // this will end the current table topics
     console.log('finish!!!');
   }
 
