@@ -2,10 +2,15 @@
 <input matInput placeholder="Participant's name" [(ngModel)]="name" [disabled]="hasQuestion()">
 <div class="timer">{{currentTimeString}}</div>
 <button (click)="showQuestion()" [disabled]="name === ''">{{hasQuestion() ? "Change Question" : "Reveal Question"}}</button>
-<button (click)="toggleTimer()" [disabled]="name === '' || !hasQuestion()">{{isTimerOn() ? "Stop Timer" : "Start Timer"}}</button>
-<button (click)="newPlayer()" [disabled]="name === '' || !hasQuestion()">New Participant</button>
-<button (click)="finish()" [disabled]="name === ''">Finish</button>
+<button (click)="toggleTimer()" [disabled]="!hasQuestion()">{{isTimerOn() ? "Stop Timer" : "Start Timer"}}</button>
+<button (click)="resetTimer()" [disabled]="!hasQuestion() || !hasTime() || isTimerOn()">Reset Timer</button>
+<button (click)="newPlayer()" [disabled]="!hasQuestion() || isTimerOn()">New Participant</button>
+<button (click)="finish()" [disabled]="!hasQuestion() || isTimerOn()">Finish</button>
 <div *ngIf="hasQuestion()">{{currentQuestionObj.question}}</div>
-<div>
-    Previous participants will go here.
-</div>
+<ul>
+    <li *ngFor="let player of players; index as i;">
+        <div>{{player.name}}</div>
+        <div>{{player.question.question}}</div>
+        <div>{{player.time !== '00:00:00' ? player.time : '-Time Not Tracked-'}}</div>
+    </li>
+</ul>

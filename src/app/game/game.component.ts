@@ -24,7 +24,7 @@ export class GameComponent implements OnInit {
   public currentQuestionObj: Question;
   public timerOn = false;
   public currentTime = 0;
-  public currentTimeString: string;
+  public currentTimeString = '00:00:00';
   public interval: any;
   name = '';
   players: Player[] = [];
@@ -44,14 +44,11 @@ export class GameComponent implements OnInit {
   }
 
   newPlayer() {
-    // this will end the current player's session and start a new player
-    
     this.finishCurrentPlayer();
     this.startNewPlayer();
   }
 
   private finishCurrentPlayer() {
-    console.log('newPlayer');
     const player: Player = {
       name: this.name,
       question: this.currentQuestionObj,
@@ -66,9 +63,7 @@ export class GameComponent implements OnInit {
       question: '',
       topic: ''
     };
-    this.timerOn = false;
-    this.currentTime = 0;
-    this.currentTimeString = '';
+    this.resetTimer();
     this.name = '';
   }
 
@@ -93,9 +88,17 @@ export class GameComponent implements OnInit {
     }
   }
 
+  resetTimer() {
+    this.currentTime = 0;
+    this.currentTimeString = '00:00:00';
+  }
+
   isTimerOn() {
     return this.timerOn;
   }
 
+  hasTime() {
+    return this.currentTimeString !== '00:00:00';
+  }
 
 }
