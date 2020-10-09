@@ -39,4 +39,10 @@
     h1 {
         font-size: 4vh;
     }
+
+    mat-card {
+        display: flex;
+        height: 250px;
+        align-items: center;
+    }
 }
