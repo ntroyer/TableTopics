@@ -38,7 +38,10 @@ interface Player {
 })
 export class GameComponent implements OnInit {
   public gameQuestions: Question[] = questions;
-  public currentQuestionObj: Question;
+  public currentQuestionObj: Question = {
+    question: '',
+    topic: ''
+  };
   public timerOn = false;
   public currentTime = 0;
   public currentTimeString = '00:00:00';
@@ -58,9 +61,6 @@ export class GameComponent implements OnInit {
   }
 
   hasQuestion() {
-    if (typeof this.currentQuestionObj !== 'undefined') {
-      return false;
-    }
     return typeof this.currentQuestionObj !== 'undefined' && this.currentQuestionObj.question !== '';
   }
 
