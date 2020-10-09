@@ -20,10 +20,12 @@ interface Player {
   animations: [
     trigger('openCloseQuestion', [
       state('open', style({
-        visibility: 'visible'
+        visibility: 'visible',
+        height: '250px'
       })),
       state('closed', style({
-        visibility: 'hidden'
+        visibility: 'hidden',
+        height: '250px'
       })),
       transition('open => closed', [
         animate('1s')
