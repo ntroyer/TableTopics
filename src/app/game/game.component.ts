@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // todo - eventually, we will want to load the questions from a database in the backend, maybe...
 import questions from '../questions/questions.json';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 interface Question {
   question: string;
@@ -16,6 +17,22 @@ interface Player {
 
 @Component({
   selector: 'app-game',
+  animations: [
+    trigger('openCloseQuestion', [
+      state('open', style({
+        visibility: 'visible'
+      })),
+      state('closed', style({
+        visibility: 'hidden'
+      })),
+      transition('open => closed', [
+        animate('1s')
+      ]),
+      transition('closed => open', [
+        animate('1s')
+      ])
+    ]),
+  ],
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss']
 })
@@ -41,6 +58,9 @@ export class GameComponent implements OnInit {
   }
 
   hasQuestion() {
+    if (typeof this.currentQuestionObj !== 'undefined') {
+      return false;
+    }
     return typeof this.currentQuestionObj !== 'undefined' && this.currentQuestionObj.question !== '';
   }
 
@@ -108,6 +128,14 @@ export class GameComponent implements OnInit {
 
   hasTime() {
     return this.currentTime !== 0;
+  }
+
+  getTimerHiddenText() {
+    if (this.isTimerOn()) {
+      return "Timer is On";
+    }
+
+    return "Timer is Off";
   }
 
 }
