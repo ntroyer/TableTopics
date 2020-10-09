@@ -32,6 +32,56 @@ interface Player {
         animate('1s')
       ])
     ]),
+    trigger('changeTimerColor', [
+      state('early', style({
+        backgroundColor: 'lightblue'
+      })),
+      state('green', style({
+        backgroundColor: 'lightgreen'
+      })),
+      state('yellow', style({
+        backgroundColor: 'yellow'
+      })),
+      state('red', style({
+        backgroundColor: 'red'
+      })),
+      state('death', style({
+        backgroundColor: 'crimson'
+      })),
+      transition('early => green', [
+        animate('1s')
+      ]),
+      transition('green => yellow', [
+        animate('1s')
+      ]),
+      transition('yellow => red', [
+        animate('1s')
+      ]),
+      transition('red => death', [
+        animate('1s')
+      ]),
+      transition('death => early', [
+        animate('1s')
+      ]),
+      transition('red => early', [
+        animate('1s')
+      ]),
+      transition('yellow => early', [
+        animate('1s')
+      ]),
+      transition('green => early', [
+        animate('1s')
+      ]),
+      transition('early => yellow', [
+        animate('1s')
+      ]),
+      transition('early => red', [
+        animate('1s')
+      ]),
+      transition('early => crimson', [
+        animate('1s')
+      ])
+    ])
   ],
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss']
@@ -53,6 +103,11 @@ export class GameComponent implements OnInit {
   name = '';
   timerHidden = false;
   players: Player[] = [];
+
+  greenTime = 60;
+  yellowTime = 90;
+  redTime = 120;
+  deathTime = 150;
 
   constructor() { }
 
@@ -99,6 +154,7 @@ export class GameComponent implements OnInit {
 
   toggleTimer() {
     this.timerOn = !this.timerOn;
+    console.log(this.currentTime);
 
     if (this.timerOn) {
       this.interval = setInterval(() => {
@@ -140,6 +196,28 @@ export class GameComponent implements OnInit {
     }
 
     return "Timer is Off";
+  }
+
+  getTimerColor() {
+    let time = this.currentTime / 100;
+
+    if (this.isTimerHidden()) {
+      return 'early';
+    }
+
+    if (time >= this.greenTime && time < this.yellowTime) {
+      return 'green';
+    }
+    if (time >= this.yellowTime && time < this.redTime) {
+      return 'yellow';
+    }
+    if (time >= this.redTime && time < this.deathTime) {
+      return 'red';
+    }
+    if (time >= this.deathTime) {
+      return 'death';
+    }
+    return 'early';
   }
 
 }

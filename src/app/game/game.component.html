@@ -10,7 +10,7 @@
         </h1>
     </mat-card>
 </div>
-<div class="timer-control">
+<div class="timer-control" [@changeTimerColor]="getTimerColor()">
     <div class="timer">
         <h1>
             {{isTimerHidden() ? getTimerHiddenText() : currentTimeString}}
