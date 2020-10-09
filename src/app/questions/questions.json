@@ -16,11 +16,27 @@
         "topic": "animals"
     },
     {
+        "question": "We are now at the point that there are more tigers in captivity in the USA than there are wild tigers in the rest of the world. Is this a measure of preservation? Or is it something else?",
+        "topic": "animals"
+    },
+    {
+        "question": "It has been said that commercials are the most powerful form of art in the modern age. What are your thoughts on that?",
+        "topic": "art"
+    },
+    {
         "question": "What is art?",
         "topic": "art"
     },
     {
         "question": "Tell us about your favorite artist.",
+        "topic": "art"
+    },
+    {
+        "question": "Which does life imitate more - art? Or bad TV?",
+        "topic": "art"
+    },
+    {
+        "question": "Art takes many forms ranging from poetry and dance to painting and sculpture. What artistic form do you most enjoy?",
         "topic": "art"
     },
     {
@@ -32,11 +48,31 @@
         "topic": "badhabits"
     },
     {
+        "question": "What habit do you have that you would most like to give up?",
+        "topic": "badhabits"
+    },
+    {
+        "question": "Do you have any bad habits that you are actually ok with?",
+        "topic": "badhabits"
+    },
+    {
         "question": "Who is your favorite author? What do you like about their writing?",
         "topic": "books"
     },
     {
         "question": "If your life was a book, what book would it be?",
+        "topic": "books"
+    },
+    {
+        "question": "What's your most memorable book from childhood?",
+        "topic": "books"
+    },
+    {
+        "question": "Tell us about the scariest story you ever read.",
+        "topic": "books"
+    },
+    {
+        "question": "What is your favorite genre of fiction?",
         "topic": "books"
     }
 ]

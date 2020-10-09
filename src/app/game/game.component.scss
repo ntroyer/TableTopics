@@ -1,9 +1,11 @@
-.timer-control {
+.timer-control { 
+    margin: 10px auto;
+
     .timer {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 0.8vw;
+        font-size: 2vh;
     }
     .timer-buttons {
         display: flex;
@@ -27,6 +29,10 @@
         padding: 5px;
         width: 28vh;
     }
+
+    button {
+        margin: 2px;
+    }
 }
 
 .name-control {
@@ -36,13 +42,16 @@
 }
 
 .question-control {
-    h1 {
-        font-size: 4vh;
+    font-size: 1.2vh;
+
+    button {
+        margin: 10px auto;
     }
 
     mat-card {
         display: flex;
         height: 250px;
         align-items: center;
+        justify-content: center;
     }
 }

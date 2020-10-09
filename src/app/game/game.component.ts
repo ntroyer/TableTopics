@@ -20,10 +20,10 @@ interface Player {
   animations: [
     trigger('openCloseQuestion', [
       state('open', style({
-        visibility: 'visible'
+        backgroundColor: 'orange'
       })),
       state('closed', style({
-        visibility: 'hidden'
+        backgroundColor: 'turquoise'
       })),
       transition('open => closed', [
         animate('1s')
@@ -39,6 +39,10 @@ interface Player {
 export class GameComponent implements OnInit {
   public gameQuestions: Question[] = questions;
   public currentQuestionObj: Question = {
+    question: '',
+    topic: ''
+  };
+  public prevQuestion: Question = {
     question: '',
     topic: ''
   };
