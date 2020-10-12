@@ -117,6 +117,13 @@ export class GameComponent implements OnInit {
   showQuestion() {
     const randomQuestion = this.gameQuestions[Math.floor(Math.random() * this.gameQuestions.length)];
     this.currentQuestionObj = randomQuestion;
+
+    if (this.prevQuestion.question !== '') {
+      this.gameQuestions.push(this.prevQuestion);
+    }
+
+    this.prevQuestion = randomQuestion;
+    this.gameQuestions = this.gameQuestions.filter(item => item.question !== this.prevQuestion.question);
   }
 
   hasQuestion() {
@@ -154,7 +161,6 @@ export class GameComponent implements OnInit {
 
   toggleTimer() {
     this.timerOn = !this.timerOn;
-    console.log(this.currentTime);
 
     if (this.timerOn) {
       this.interval = setInterval(() => {
@@ -196,6 +202,15 @@ export class GameComponent implements OnInit {
     }
 
     return "Timer is Off";
+  }
+
+  removeQuestion() {
+    this.prevQuestion = {
+      question: '',
+      topic: ''
+    }
+    this.gameQuestions = this.gameQuestions.filter(item => item.question !== this.currentQuestionObj.question);
+    this.showQuestion();
   }
 
   getTimerColor() {

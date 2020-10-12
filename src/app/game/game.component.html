@@ -4,6 +4,7 @@
 </div>
 <div class="question-control">
     <button mat-button (click)="showQuestion()" [disabled]="name === ''">{{hasQuestion() ? "Change Question" : "Reveal Question"}}</button>
+    <button mat-button *ngIf="hasQuestion()" (click)="removeQuestion()">{{"Remove Question From Game"}}</button>
     <mat-card [@openCloseQuestion]="hasQuestion() ? 'open' : 'closed'">
         <h1>
             {{hasQuestion() ? currentQuestionObj.question : 'Your question will be displayed here.'}}
