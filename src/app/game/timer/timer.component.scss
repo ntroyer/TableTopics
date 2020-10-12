@@ -1,0 +1,22 @@
+.timer-control { 
+    margin: 10px auto;
+    max-width: 330px;
+    background-color: lightblue;
+    border-radius: 10px;
+
+    .timer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vh;
+    }
+    .timer-buttons {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
+
+        button {
+            margin: 2px;
+        }
+    }
+}

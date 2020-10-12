@@ -1,28 +1,17 @@
 <h4>Enter the participant's name to begin</h4>
 <div class="name-control">
-    <input placeholder="Name" [(ngModel)]="name" [disabled]="hasQuestion()">
+    <input placeholder="Name" [(ngModel)]="currentPlayerName" [disabled]="hasQuestion()">
 </div>
 <div class="question-control">
-    <button mat-button (click)="showQuestion()" [disabled]="name === ''">{{hasQuestion() ? "Change Question" : "Reveal Question"}}</button>
-    <button mat-button *ngIf="hasQuestion()" (click)="removeQuestion()">{{"Remove Question From Game"}}</button>
+    <button mat-button (click)="showQuestion()" [disabled]="currentPlayerName === '' || getNumQuestions() <= 0 || isTimerOn()">{{hasQuestion() ? "Change Question" : "Reveal Question"}}</button>
+    <button mat-button *ngIf="hasQuestion() && getNumQuestions() > 0" (click)="removeQuestion()" [disabled]="isTimerOn()">{{"Remove Question From Game"}}</button>
     <mat-card [@openCloseQuestion]="hasQuestion() ? 'open' : 'closed'">
         <h1>
-            {{hasQuestion() ? currentQuestionObj.question : 'Your question will be displayed here.'}}
+            {{hasQuestion() ? getCurrentQuestion() : 'Your question will be displayed here.'}}
         </h1>
     </mat-card>
 </div>
-<div class="timer-control" [@changeTimerColor]="getTimerColor()">
-    <div class="timer">
-        <h1>
-            {{isTimerHidden() ? getTimerHiddenText() : currentTimeString}}
-        </h1>
-    </div>
-    <div class="timer-buttons">
-        <button mat-button (click)="toggleShowTimer()" [disabled]="!hasQuestion()">{{isTimerHidden() ? "Show Timer" : "Hide Timer"}}</button>
-        <button mat-button (click)="toggleTimer()" [disabled]="!hasQuestion()">{{isTimerOn() ? "Stop Timer" : "Start Timer"}}</button>
-        <button mat-button (click)="resetTimer()" [disabled]="!hasQuestion() || !hasTime() || isTimerOn()">Reset Timer</button>
-    </div>
-</div>
+<app-timer></app-timer>
 <div class="player-control">
     <button mat-button (click)="newPlayer()" [disabled]="!hasQuestion() || isTimerOn()">New Participant</button>
     <button mat-button (click)="finish()" [disabled]="!hasQuestion() || isTimerOn()">Finish</button>

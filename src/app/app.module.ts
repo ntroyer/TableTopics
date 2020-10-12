@@ -10,13 +10,17 @@ import { AppComponent } from './app.component';
 import { GameComponent } from './game/game.component';
 import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { HomeComponent } from './home/home.component';
+import { TimerComponent } from './game/timer/timer.component';
+import { FinishComponent } from './finish/finish.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameComponent,
     PageNotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    TimerComponent,
+    FinishComponent
   ],
   imports: [
     BrowserModule,
