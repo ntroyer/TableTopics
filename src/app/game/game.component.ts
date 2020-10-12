@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // todo - eventually, we will want to load the questions from a database in the backend, maybe...
 import questions from '../questions/questions.json';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Router } from '@angular/router';
 
 import { Question, GameService } from './game.service';
 
@@ -44,13 +45,12 @@ export class GameComponent implements OnInit {
   currentPlayerName = '';
   players: Player[] = [];
 
-  constructor(private gameService: GameService) { }
+  constructor(private gameService: GameService, public router: Router) { }
 
   ngOnInit(): void {
   }
 
   showQuestion() {
-    console.log('before show question...', this.gameQuestions);
     const randomQuestion = this.gameQuestions[Math.floor(Math.random() * this.gameQuestions.length)];
     this.gameService.currentQuestion = randomQuestion;
 
@@ -60,7 +60,6 @@ export class GameComponent implements OnInit {
 
     this.prevQuestion = randomQuestion;
     this.gameQuestions = this.gameQuestions.filter(item => item.question !== this.prevQuestion.question);
-    console.log('after show question...', this.gameQuestions);
   }
 
   hasQuestion() {
@@ -89,8 +88,7 @@ export class GameComponent implements OnInit {
   }
 
   finish() {
-    // this will end the current table topics
-    console.log('finish!!!');
+    this.router.navigate(['../finish']);
   }
 
   removeQuestion() {
