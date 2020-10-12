@@ -1,4 +1,4 @@
-### TableTopicsQsApp
+### Table Topics
 
 Table Topics web app for Toastmasters. Written in Angular.
 
