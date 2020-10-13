@@ -66,6 +66,10 @@ export class GameComponent implements OnInit {
     return this.gameService.hasQuestion();
   }
 
+  hasPlayers() {
+    return this.players.length > 0;
+  }
+
   newPlayer() {
     this.finishCurrentPlayer();
     this.startNewPlayer();

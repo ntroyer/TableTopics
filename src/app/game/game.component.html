@@ -14,7 +14,7 @@
 <app-timer></app-timer>
 <div class="player-control">
     <button mat-button (click)="newPlayer()" [disabled]="!hasQuestion() || isTimerOn()">New Participant</button>
-    <button mat-button (click)="finish()" [disabled]="!hasQuestion() || isTimerOn()">Finish</button>
+    <button mat-button (click)="finish()" [disabled]="isTimerOn() || !hasPlayers()">Finish</button>
     <ul>
         <li *ngFor="let player of players; index as i;">
             <h2>{{player.name}}</h2>

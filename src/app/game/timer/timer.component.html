@@ -5,7 +5,7 @@
         </h1>
     </div>
     <div class="timer-buttons">
-        <button mat-button (click)="toggleShowTimer()" [disabled]="!hasQuestion()">{{isTimerHidden() ? "Show Timer" : "Hide Timer"}}</button>
+        <button mat-button (click)="toggleShowTimer()" [disabled]="!hasQuestion()">{{isTimerHidden() ? "Show Time" : "Hide Time"}}</button>
         <button mat-button (click)="toggleTimer()" [disabled]="!hasQuestion()">{{isTimerOn() ? "Stop Timer" : "Start Timer"}}</button>
         <button mat-button (click)="resetTimer()" [disabled]="!hasQuestion() || !hasTime() || isTimerOn()">Reset Timer</button>
     </div>
