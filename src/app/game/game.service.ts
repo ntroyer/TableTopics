@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 export interface Question {
   question: string;
-  topic: string;
+  topics: string[];
 }
 
 @Injectable({
@@ -15,10 +15,7 @@ export class GameService {
   public defaultTimeString = '00:00:00';
   public timerOn = false;
 
-  public currentQuestion: Question = {
-    question: '',
-    topic: ''
-  }
+  public currentQuestion: Question = this.getNewQuestion();
 
   constructor() { }
 
@@ -40,10 +37,11 @@ export class GameService {
   }
 
   resetCurrentQuestion() {
-    this.currentQuestion = {
-      question: '',
-      topic: ''
-    }
+    this.currentQuestion = this.getNewQuestion()
+  }
+
+  getNewQuestion() {
+    return { question: '', topics: [''] }
   }
 
   toggleTimerOn() {

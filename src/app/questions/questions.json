@@ -1,78 +1,202 @@
 [
     {
         "question": "Do you think people who have pets live longer than people who don't have pets? Why?",
-        "topic": "animals"
+        "topics": ["animals"]
     },
     {
-        "question": "Are there any animals that makes you uncomfortable?",
-        "topic": "animals"
+        "question": "Are there any animals that make you uncomfortable?",
+        "topics": ["animals"]
     },
     {
         "question": "Is a dog really man's best friend?",
-        "topic": "animals"
+        "topics": ["animals"]
     },
     {
         "question": "What is the worst possible pet a person could have?",
-        "topic": "animals"
+        "topics": ["animals"]
     },
     {
         "question": "We are now at the point that there are more tigers in captivity in the USA than there are wild tigers in the rest of the world. Is this a measure of preservation? Or is it something else?",
-        "topic": "animals"
+        "topics": ["animals"]
     },
     {
         "question": "It has been said that commercials are the most powerful form of art in the modern age. What are your thoughts on that?",
-        "topic": "art"
+        "topics": ["art"]
     },
     {
         "question": "What is art?",
-        "topic": "art"
+        "topics": ["art"]
     },
     {
         "question": "Tell us about your favorite artist.",
-        "topic": "art"
+        "topics": ["art"]
     },
     {
         "question": "Which does life imitate more - art? Or bad TV?",
-        "topic": "art"
+        "topics": ["art"]
     },
     {
         "question": "Art takes many forms ranging from poetry and dance to painting and sculpture. What artistic form do you most enjoy?",
-        "topic": "art"
+        "topics": ["art"]
     },
     {
         "question": "Do you have any bad habits? Would you care to share them with us?",
-        "topic": "badhabits"
+        "topics": ["badhabits"]
     },
     {
         "question": "What's the best way to break a bad habit?",
-        "topic": "badhabits"
+        "topics": ["badhabits"]
     },
     {
         "question": "What habit do you have that you would most like to give up?",
-        "topic": "badhabits"
+        "topics": ["badhabits"]
     },
     {
         "question": "Do you have any bad habits that you are actually ok with?",
-        "topic": "badhabits"
+        "topics": ["badhabits"]
     },
     {
         "question": "Who is your favorite author? What do you like about their writing?",
-        "topic": "books"
+        "topics": ["books"]
     },
     {
         "question": "If your life was a book, what book would it be?",
-        "topic": "books"
+        "topics": ["books"]
     },
     {
         "question": "What's your most memorable book from childhood?",
-        "topic": "books"
+        "topics": ["books"]
     },
     {
         "question": "Tell us about the scariest story you ever read.",
-        "topic": "books"
+        "topics": ["books"]
     },
     {
         "question": "What is your favorite genre of fiction?",
-        "topic": "books"
+        "topics": ["books"]
+    },
+    {
+        "question": "Would you rather be a pair of slippers, or a chair?",
+        "topics": ["wouldyourather"]
+    },
+    {
+        "question": "Would you rather have an awesome talent and never get recognized for it, or become famous for doing something stupid?",
+        "topics": ["wouldyourather"]
+    },
+    {
+        "question": "Would you rather go bungee jumping or scuba diving?",
+        "topics": ["wouldyourather"]
+    },
+    {
+        "question": "Would you rather have free Wi-Fi wherever you go or have free coffee whenever you want?",
+        "topics": ["wouldyourather"]
+    },
+    {
+        "question": "Would you rather have a Lamborghini or a bookshelf with 9000 books?",
+        "topics": ["wouldyourather"]
+    },
+    {
+        "question": "Would you rather rule the world or live in a world with absolutely no problems at all?",
+        "topics": ["wouldyourather"]
+    },
+    {
+        "question": "Would you rather live in space or under the sea?",
+        "topics": ["wouldyourather"]
+    },
+    {
+        "question": "Would you rather be a cow or a chicken?",
+        "topics": ["wouldyourather"]
+    },
+    {
+        "question": "Would you rather experience the beginning of planet Earth or the end of planet Earth?",
+        "topics": ["wouldyourather"]
+    },
+    {
+        "question": "Would you rather be able to fly or be invisible?",
+        "topics": ["wouldyourather"]
+    },
+    {
+        "question": "Which activitives make you lose track of time?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "Can you describe your life in a six word sentence?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "What does it mean to be human?",
+        "topics": ["general"]
+    },
+    {
+        "question": "What do you have that you cannot live without?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "What can money not buy?",
+        "topics": ["general"]
+    },
+    {
+        "question": "Where do you find peace?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "How are you pursuing your dreams right now?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "What chances do you wish you had taken?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "What good comes from suffering?",
+        "topics": ["general"]
+    },
+    {
+        "question": "What makes you weird?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "When you have a random hour of free time, what do you usually do?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "What is missing in your life?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "What are the top three qualities you look for in a friend?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "What makes someone a hero?",
+        "topics": ["general"]
+    },
+    {
+        "question": "When did you realize that life is short?",
+        "topics": ["personal", "time"]
+    },
+    {
+        "question": "How would you describe your future in three words?",
+        "topics": ["future", "personal"]
+    },
+    {
+        "question": "What is your favorite place on earth?",
+        "topics": ["places", "personal"]
+    },
+    {
+        "question": "What is the last thing that made you laugh out loud?",
+        "topics": ["humor", "personal"]
+    },
+    {
+        "question": "What makes life easier?",
+        "topics": ["life"]
+    },
+    {
+        "question": "What confuses you?",
+        "topics": ["personal", "confusion"]
+    },
+    {
+        "question": "How many hours a week do you spend online?",
+        "topics": ["time", "internet", "personal"]
     }
 ]

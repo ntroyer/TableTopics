@@ -36,11 +36,7 @@ interface Player {
 })
 export class GameComponent implements OnInit {
   public gameQuestions: Question[] = questions;
-
-  public prevQuestion: Question = {
-    question: '',
-    topic: ''
-  };
+  public prevQuestion: Question = this.gameService.getNewQuestion();
   
   currentPlayerName = '';
   players: Player[] = [];
@@ -96,10 +92,7 @@ export class GameComponent implements OnInit {
   }
 
   removeQuestion() {
-    this.prevQuestion = {
-      question: '',
-      topic: ''
-    }
+    this.prevQuestion = this.gameService.getNewQuestion();
     this.gameQuestions = this.gameQuestions.filter(item => item.question !== this.gameService.currentQuestion.question);
     this.showQuestion();
   }
