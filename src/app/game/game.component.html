@@ -3,7 +3,7 @@
     <input placeholder="Name" [(ngModel)]="currentPlayerName" [disabled]="hasQuestion()">
 </div>
 <div class="question-control">
-    <button mat-button (click)="showQuestion()" [disabled]="currentPlayerName === '' || getNumQuestions() <= 0 || isTimerOn()">{{hasQuestion() ? "Change Question" : "Reveal Question"}}</button>
+    <button mat-button (click)="changeQuestion()" [disabled]="currentPlayerName === '' || getNumQuestions() <= 0 || isTimerOn()">{{hasQuestion() ? "Change Question" : "Reveal Question"}}</button>
     <button mat-button *ngIf="hasQuestion() && getNumQuestions() > 0" (click)="removeQuestion()" [disabled]="isTimerOn()">{{"Remove Question From Game"}}</button>
     <mat-card [@openCloseQuestion]="hasQuestion() ? 'open' : 'closed'">
         <h1>
@@ -13,10 +13,10 @@
 </div>
 <app-timer></app-timer>
 <div class="player-control">
-    <button mat-button (click)="newPlayer()" [disabled]="!hasQuestion() || isTimerOn()">New Participant</button>
+    <button mat-button (click)="setupNewPlayer()" [disabled]="!hasQuestion() || isTimerOn()">New Participant</button>
     <button mat-button (click)="finish()" [disabled]="isTimerOn() || !hasPlayers()">Finish</button>
     <ul>
-        <li *ngFor="let player of players; index as i;">
+        <li *ngFor="let player of gameService.players; index as i;">
             <h2>{{player.name}}</h2>
             <p>{{player.question.question}}</p>
             <h4 *ngIf="player.time !== '00:00:00'">{{player.time}}</h4>

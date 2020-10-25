@@ -1,17 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 // todo - eventually, we will want to load the questions from a database in the backend, maybe...
-import questions from '../questions/questions.json';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Router } from '@angular/router';
 
-import { Question, GameService } from './game.service';
-
-interface Player {
-  name: string;
-  question: Question;
-  time: string;
-  answer: string;
-}
+import { GameService } from './game.service';
 
 @Component({
   selector: 'app-game',
@@ -35,27 +27,19 @@ interface Player {
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit {
-  public gameQuestions: Question[] = questions;
-  public prevQuestion: Question = this.gameService.getNewQuestion();
-  
   currentPlayerName = '';
-  players: Player[] = [];
 
   constructor(private gameService: GameService, public router: Router) { }
 
   ngOnInit(): void {
   }
 
-  showQuestion() {
-    const randomQuestion = this.gameQuestions[Math.floor(Math.random() * this.gameQuestions.length)];
-    this.gameService.currentQuestion = randomQuestion;
+  changeQuestion() {
+    this.gameService.changeQuestion();
+  }
 
-    if (this.prevQuestion.question !== '') {
-      this.gameQuestions.push(this.prevQuestion);
-    }
-
-    this.prevQuestion = randomQuestion;
-    this.gameQuestions = this.gameQuestions.filter(item => item.question !== this.prevQuestion.question);
+  removeQuestion() {
+    this.gameService.removeQuestion();
   }
 
   hasQuestion() {
@@ -63,38 +47,16 @@ export class GameComponent implements OnInit {
   }
 
   hasPlayers() {
-    return this.players.length > 0;
+    return this.gameService.hasPlayers();
   }
 
-  newPlayer() {
-    this.finishCurrentPlayer();
-    this.startNewPlayer();
-  }
-
-  private finishCurrentPlayer() {
-    const player: Player = {
-      name: this.currentPlayerName,
-      question: this.gameService.currentQuestion,
-      time: this.gameService.getCurrentTimeAsString(),
-      answer: ''
-    }
-    this.players.push(player);
-  }
-
-  private startNewPlayer() {
-    this.gameService.resetCurrentQuestion();
-    this.gameService.resetTimer();
+  setupNewPlayer() {
+    this.gameService.finishCurrentPlayer(this.currentPlayerName);
     this.currentPlayerName = '';
   }
 
   finish() {
     this.router.navigate(['../finish']);
-  }
-
-  removeQuestion() {
-    this.prevQuestion = this.gameService.getNewQuestion();
-    this.gameQuestions = this.gameQuestions.filter(item => item.question !== this.gameService.currentQuestion.question);
-    this.showQuestion();
   }
 
   isTimerOn() {
@@ -106,7 +68,7 @@ export class GameComponent implements OnInit {
   }
 
   getNumQuestions() {
-    return this.gameQuestions.length;
+    return this.gameService.getQuestionCount();
   }
 
 }
