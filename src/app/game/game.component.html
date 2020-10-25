@@ -2,9 +2,10 @@
 <div class="name-control">
     <input placeholder="Name" [(ngModel)]="currentPlayerName" [disabled]="hasQuestion()">
 </div>
+<div class="num-questions">{{(getNumQuestions() + 1) + ' questions'}}</div>
 <div class="question-control">
     <button mat-button (click)="changeQuestion()" [disabled]="currentPlayerName === '' || getNumQuestions() <= 0 || isTimerOn()">{{hasQuestion() ? "Change Question" : "Reveal Question"}}</button>
-    <button mat-button *ngIf="hasQuestion() && getNumQuestions() > 0" (click)="removeQuestion()" [disabled]="isTimerOn()">{{"Remove Question From Game"}}</button>
+    <button mat-button *ngIf="hasQuestion()" (click)="removeQuestion()" [disabled]="isTimerOn() || getNumQuestions() <= 1">{{ getNumQuestions() > 1 ? "Remove Question From Game" : "No Questions to Remove"}}</button>
     <mat-card [@openCloseQuestion]="hasQuestion() ? 'open' : 'closed'">
         <h1>
             {{hasQuestion() ? getCurrentQuestion() : 'Your question will be displayed here.'}}
