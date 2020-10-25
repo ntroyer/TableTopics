@@ -1,1 +1,11 @@
 <p>Thank you for joining Table Topics!</p>
+<p>Tonight's players are:</p>
+<div class="end-players">
+    <ul>
+        <li *ngFor="let player of gameService.players; index as i;">
+            <h2>{{player.name}}</h2>
+            <p>{{player.question.question}}</p>
+            <h4 *ngIf="player.time !== '00:00:00'">{{player.time}}</h4>
+        </li>
+    </ul>
+</div>
