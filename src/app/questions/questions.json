@@ -306,5 +306,33 @@
     {
         "question": "What music do you listen to that lifts your spirits when you're feeling down?",
         "topics": ["personal", "art", "music"]
+    },
+    {
+        "question": "If there was a movie about your life, what genre(s) would it be?",
+        "topics": ["personal", "art", "movies"]
+    },
+    {
+        "question": "How would an extra $1000 a month change your life?",
+        "topics": ["personal", "money", "yanggang"]
+    },
+    {
+        "question": "When did you not speak up when you should have?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "What is your favorite quote?",
+        "topics": ["personal", "quotes"]
+    },
+    {
+        "question": "What was the last time you felt lucky?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "Has a dream ever changed your life? If so, what was it?",
+        "topics": ["personal", "dreams"]
+    },
+    {
+        "question": "What's something you recently learned about yourself?",
+        "topics": ["personal"]
     }
 ]
