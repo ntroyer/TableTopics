@@ -29,7 +29,7 @@ import { GameService } from './game.service';
 export class GameComponent implements OnInit {
   currentPlayerName = '';
 
-  constructor(private gameService: GameService, public router: Router) { }
+  constructor(public gameService: GameService, public router: Router) { }
 
   ngOnInit(): void {
   }

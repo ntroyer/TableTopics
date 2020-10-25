@@ -198,5 +198,113 @@
     {
         "question": "How many hours a week do you spend online?",
         "topics": ["time", "internet", "personal"]
+    },
+    {
+        "question": "What do you spend the most frivolous amount of money on?",
+        "topics": ["personal", "money"]
+    },
+    {
+        "question": "What is the best thing you ever purchased that was under $50?",
+        "topics": ["personal", "money"]
+    },
+    {
+        "question": "If you could change your career regardless if you have the talent, what would it be and why?",
+        "topics": ["personal", "jobs"]
+    },
+    {
+        "question": "What is the definition of success to you?",
+        "topics": ["personal", "success"]
+    },
+    {
+        "question": "Would you rather change something in the past or find out what happens in the future?",
+        "topics": ["personal", "time", "wouldyourather"]
+    },
+    {
+        "question": "If you could suffer no consequences from eating for a day, what would you eat and why?",
+        "topics": ["personal", "food"]
+    },
+    {
+        "question": "What life hack have you done that changed your life that you think would benefit others as well?",
+        "topics": ["personal", "selfhelp"]
+    },
+    {
+        "question": "At one point in your life did you realize you are no longer a kid and need to be an adult?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "What is one thing you do that others think is crazy?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "If you had to move 3000 miles away, what one thing would you miss the most?",
+        "topics": ["personal", "change"]
+    },
+    {
+        "question": "What's the best decision you ever made?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "If you could relive yesterday, what would you do differently?",
+        "topics": ["personal", "time"]
+    },
+    {
+        "question": "What is something you don't like to do that you are still really good at?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "In one year from today, how do you think your life will be different?",
+        "topics": ["personal", "time"]
+    },
+    {
+        "question": "If I gave you $1000 that had to be spent today, what would you buy?",
+        "topics": ["personal", "money"]
+    },
+    {
+        "question": "Outside of Toastmasters, what do you love to practice?",
+        "topics": ["personal", "hobbies"]
+    },
+    {
+        "question": "What things in life should always be free?",
+        "topics": ["personal", "money"]
+    },
+    {
+        "question": "What is something you have always wanted since you were a kid?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "What are you an expert at?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "What questions do you often ask yourself?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "What is your favorite time of the year?",
+        "topics": ["personal", "time"]
+    },
+    {
+        "question": "In what way are you your own worst enemy?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "What's one downside of the modern day world?",
+        "topics": ["personal", "time"]
+    },
+    {
+        "question": "What simple fact do you wish more people understood?",
+        "topics": ["personal"]
+    },
+    {
+        "question": "What have you lost interest in recently?",
+        "topics": ["personal", "hobbies"]
+    },
+    {
+        "question": "What job would you never do no matter how much it paid?",
+        "topics": ["personal", "work"]
+    },
+    {
+        "question": "What music do you listen to that lifts your spirits when you're feeling down?",
+        "topics": ["personal", "art", "music"]
     }
 ]
