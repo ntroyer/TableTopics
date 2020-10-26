@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { NgParticlesModule } from 'ng-particles';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,7 +29,8 @@ import { FinishComponent } from './finish/finish.component';
     AppRoutingModule,
     FormsModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    NgParticlesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

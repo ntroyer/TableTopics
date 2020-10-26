@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TableTopics';
+
+  particlesName = "tsparticles";
+
+  particlesOptions = {
+    particles: {
+      color: {
+        value: [ '#ff0000', '#0000ff' ]
+      },
+      lineLinked: {
+        enable: true,
+        color: 'random'
+      },
+      move: {
+        enable: true,
+        speed: 5
+      }
+    }
+  }
 }
