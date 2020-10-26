@@ -30,7 +30,9 @@ export class GameService {
 
   public players: Player[] = [];
 
-  constructor() { }
+  constructor() { 
+    this.createPlayersFromSession();
+  }
 
   hasQuestion() {
     return this.isQuestionSet(this.currentQuestion);
@@ -70,8 +72,42 @@ export class GameService {
       answer: ''
     }
     this.players.push(player);
+    this.storePlayerInSession(player);
     this.resetCurrentQuestion();
     this.resetTimer();
+  }
+
+  createPlayersFromSession() {
+    const numplayers: number = +sessionStorage.getItem('numplayers');
+
+    for (let i = 1; i <= numplayers; i++) {
+      const playername = sessionStorage.getItem('player' + i +  '_name');
+      const playerquestion = sessionStorage.getItem('player' + i + '_questiontext');
+      const playertime = sessionStorage.getItem('player' + i + '_time');
+
+      const question = {
+        question: playerquestion, 
+        topics: []
+      }
+
+      if (playername) {
+        this.players.push({
+          name: playername,
+          question: question,
+          time: playertime,
+          answer: ''
+        })
+      }
+    }
+    
+  }
+
+  storePlayerInSession(player: Player) {
+    const playerCount = this.players.length;
+    sessionStorage.setItem('player' + playerCount + "_name", player.name);
+    sessionStorage.setItem('player' + playerCount + "_questiontext", player.question.question);
+    sessionStorage.setItem('player' + playerCount + "_time", player.time);
+    sessionStorage.setItem('numplayers', playerCount.toString());
   }
 
   getRandomQuestion() {

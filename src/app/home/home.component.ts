@@ -14,7 +14,12 @@ export class HomeComponent implements OnInit {
   }
 
   startGame() {
+    this.clearPlayerStorage();
     this.router.navigate(['../game']);
+  }
+
+  clearPlayerStorage() {
+    sessionStorage.clear();
   }
 
 }
