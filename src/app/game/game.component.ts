@@ -10,7 +10,7 @@ import { GameService } from './game.service';
   animations: [
     trigger('openCloseQuestion', [
       state('open', style({
-        backgroundColor: 'orange'
+        backgroundColor: 'lightblue'
       })),
       state('closed', style({
         backgroundColor: 'turquoise'
