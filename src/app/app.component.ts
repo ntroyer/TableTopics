@@ -13,15 +13,17 @@ export class AppComponent {
   particlesOptions = {
     particles: {
       color: {
-        value: [ '#ff0000', '#0000ff' ]
-      },
-      lineLinked: {
-        enable: true,
-        color: 'random'
+        value: ["#2374C6", "#C20F00", "#FFDD22", "#000000", "#FFFFFF"]
       },
       move: {
+        direction: "right",
         enable: true,
-        speed: 5
+        speed: 6,
+        straight: true
+      },
+      size: {
+        random: true,
+        value: 50
       }
     }
   }
