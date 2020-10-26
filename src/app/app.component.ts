@@ -11,19 +11,49 @@ export class AppComponent {
   particlesName = "tsparticles";
 
   particlesOptions = {
+    background: {
+      color: {
+        value: "#FFFECB"
+      }
+    },
     particles: {
       color: {
-        value: ["#2374C6", "#C20F00", "#FFDD22", "#000000", "#FFFFFF"]
+        value: ["#FFBC7F"]
       },
       move: {
         direction: "right",
         enable: true,
-        speed: 6,
+        speed: 3,
         straight: true
       },
+      number: {
+        density: {
+          enable: true,
+          area: 800,
+          factor: 1000
+        },
+        limit: 0,
+        value: 2
+      },
+      opacity: {
+        animation: {
+          enable: false,
+          minimumValue: 0.1,
+          speed: 1,
+          sync: false
+        },
+        random: {
+          enable: true,
+          minimumValue: 0.3
+        },
+        value: 0.5
+      },
       size: {
-        random: true,
-        value: 50
+        random: {
+          enable: true,
+          minimumValue: 250
+        },
+        value: 350
       }
     }
   }
