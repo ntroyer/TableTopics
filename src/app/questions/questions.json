@@ -1,338 +1,338 @@
 [
     {
-        "question": "Do you think people who have pets live longer than people who don't have pets? Why?",
+        "text": "Do you think people who have pets live longer than people who don't have pets? Why?",
         "topics": ["animals"]
     },
     {
-        "question": "Are there any animals that make you uncomfortable?",
+        "text": "Are there any animals that make you uncomfortable?",
         "topics": ["animals"]
     },
     {
-        "question": "Is a dog really man's best friend?",
+        "text": "Is a dog really man's best friend?",
         "topics": ["animals"]
     },
     {
-        "question": "What is the worst possible pet a person could have?",
+        "text": "What is the worst possible pet a person could have?",
         "topics": ["animals"]
     },
     {
-        "question": "We are now at the point that there are more tigers in captivity in the USA than there are wild tigers in the rest of the world. Is this a measure of preservation? Or is it something else?",
+        "text": "We are now at the point that there are more tigers in captivity in the USA than there are wild tigers in the rest of the world. Is this a measure of preservation? Or is it something else?",
         "topics": ["animals"]
     },
     {
-        "question": "It has been said that commercials are the most powerful form of art in the modern age. What are your thoughts on that?",
+        "text": "It has been said that commercials are the most powerful form of art in the modern age. What are your thoughts on that?",
         "topics": ["art"]
     },
     {
-        "question": "What is art?",
+        "text": "What is art?",
         "topics": ["art"]
     },
     {
-        "question": "Tell us about your favorite artist.",
+        "text": "Tell us about your favorite artist.",
         "topics": ["art"]
     },
     {
-        "question": "Which does life imitate more - art? Or bad TV?",
+        "text": "Which does life imitate more - art? Or bad TV?",
         "topics": ["art"]
     },
     {
-        "question": "Art takes many forms ranging from poetry and dance to painting and sculpture. What artistic form do you most enjoy?",
+        "text": "Art takes many forms ranging from poetry and dance to painting and sculpture. What artistic form do you most enjoy?",
         "topics": ["art"]
     },
     {
-        "question": "Do you have any bad habits? Would you care to share them with us?",
+        "text": "Do you have any bad habits? Would you care to share them with us?",
         "topics": ["badhabits"]
     },
     {
-        "question": "What's the best way to break a bad habit?",
+        "text": "What's the best way to break a bad habit?",
         "topics": ["badhabits"]
     },
     {
-        "question": "What habit do you have that you would most like to give up?",
+        "text": "What habit do you have that you would most like to give up?",
         "topics": ["badhabits"]
     },
     {
-        "question": "Do you have any bad habits that you are actually ok with?",
+        "text": "Do you have any bad habits that you are actually ok with?",
         "topics": ["badhabits"]
     },
     {
-        "question": "Who is your favorite author? What do you like about their writing?",
+        "text": "Who is your favorite author? What do you like about their writing?",
         "topics": ["books"]
     },
     {
-        "question": "If your life was a book, what book would it be?",
+        "text": "If your life was a book, what book would it be?",
         "topics": ["books"]
     },
     {
-        "question": "What's your most memorable book from childhood?",
+        "text": "What's your most memorable book from childhood?",
         "topics": ["books"]
     },
     {
-        "question": "Tell us about the scariest story you ever read.",
+        "text": "Tell us about the scariest story you ever read.",
         "topics": ["books"]
     },
     {
-        "question": "What is your favorite genre of fiction?",
+        "text": "What is your favorite genre of fiction?",
         "topics": ["books"]
     },
     {
-        "question": "Would you rather be a pair of slippers, or a chair?",
+        "text": "Would you rather be a pair of slippers, or a chair?",
         "topics": ["wouldyourather"]
     },
     {
-        "question": "Would you rather have an awesome talent and never get recognized for it, or become famous for doing something stupid?",
+        "text": "Would you rather have an awesome talent and never get recognized for it, or become famous for doing something stupid?",
         "topics": ["wouldyourather"]
     },
     {
-        "question": "Would you rather go bungee jumping or scuba diving?",
+        "text": "Would you rather go bungee jumping or scuba diving?",
         "topics": ["wouldyourather"]
     },
     {
-        "question": "Would you rather have free Wi-Fi wherever you go or have free coffee whenever you want?",
+        "text": "Would you rather have free Wi-Fi wherever you go or have free coffee whenever you want?",
         "topics": ["wouldyourather"]
     },
     {
-        "question": "Would you rather have a Lamborghini or a bookshelf with 9000 books?",
+        "text": "Would you rather have a Lamborghini or a bookshelf with 9000 books?",
         "topics": ["wouldyourather"]
     },
     {
-        "question": "Would you rather rule the world or live in a world with absolutely no problems at all?",
+        "text": "Would you rather rule the world or live in a world with absolutely no problems at all?",
         "topics": ["wouldyourather"]
     },
     {
-        "question": "Would you rather live in space or under the sea?",
+        "text": "Would you rather live in space or under the sea?",
         "topics": ["wouldyourather"]
     },
     {
-        "question": "Would you rather be a cow or a chicken?",
+        "text": "Would you rather be a cow or a chicken?",
         "topics": ["wouldyourather"]
     },
     {
-        "question": "Would you rather experience the beginning of planet Earth or the end of planet Earth?",
+        "text": "Would you rather experience the beginning of planet Earth or the end of planet Earth?",
         "topics": ["wouldyourather"]
     },
     {
-        "question": "Would you rather be able to fly or be invisible?",
+        "text": "Would you rather be able to fly or be invisible?",
         "topics": ["wouldyourather"]
     },
     {
-        "question": "Which activitives make you lose track of time?",
+        "text": "Which activitives make you lose track of time?",
         "topics": ["personal"]
     },
     {
-        "question": "Can you describe your life in a six word sentence?",
+        "text": "Can you describe your life in a six word sentence?",
         "topics": ["personal"]
     },
     {
-        "question": "What does it mean to be human?",
+        "text": "What does it mean to be human?",
         "topics": ["general"]
     },
     {
-        "question": "What do you have that you cannot live without?",
+        "text": "What do you have that you cannot live without?",
         "topics": ["personal"]
     },
     {
-        "question": "What can money not buy?",
+        "text": "What can money not buy?",
         "topics": ["general"]
     },
     {
-        "question": "Where do you find peace?",
+        "text": "Where do you find peace?",
         "topics": ["personal"]
     },
     {
-        "question": "How are you pursuing your dreams right now?",
+        "text": "How are you pursuing your dreams right now?",
         "topics": ["personal"]
     },
     {
-        "question": "What chances do you wish you had taken?",
+        "text": "What chances do you wish you had taken?",
         "topics": ["personal"]
     },
     {
-        "question": "What good comes from suffering?",
+        "text": "What good comes from suffering?",
         "topics": ["general"]
     },
     {
-        "question": "What makes you weird?",
+        "text": "What makes you weird?",
         "topics": ["personal"]
     },
     {
-        "question": "When you have a random hour of free time, what do you usually do?",
+        "text": "When you have a random hour of free time, what do you usually do?",
         "topics": ["personal"]
     },
     {
-        "question": "What is missing in your life?",
+        "text": "What is missing in your life?",
         "topics": ["personal"]
     },
     {
-        "question": "What are the top three qualities you look for in a friend?",
+        "text": "What are the top three qualities you look for in a friend?",
         "topics": ["personal"]
     },
     {
-        "question": "What makes someone a hero?",
+        "text": "What makes someone a hero?",
         "topics": ["general"]
     },
     {
-        "question": "When did you realize that life is short?",
+        "text": "When did you realize that life is short?",
         "topics": ["personal", "time"]
     },
     {
-        "question": "How would you describe your future in three words?",
+        "text": "How would you describe your future in three words?",
         "topics": ["future", "personal"]
     },
     {
-        "question": "What is your favorite place on earth?",
+        "text": "What is your favorite place on earth?",
         "topics": ["places", "personal"]
     },
     {
-        "question": "What is the last thing that made you laugh out loud?",
+        "text": "What is the last thing that made you laugh out loud?",
         "topics": ["humor", "personal"]
     },
     {
-        "question": "What makes life easier?",
+        "text": "What makes life easier?",
         "topics": ["life"]
     },
     {
-        "question": "What confuses you?",
+        "text": "What confuses you?",
         "topics": ["personal", "confusion"]
     },
     {
-        "question": "How many hours a week do you spend online?",
+        "text": "How many hours a week do you spend online?",
         "topics": ["time", "internet", "personal"]
     },
     {
-        "question": "What do you spend the most frivolous amount of money on?",
+        "text": "What do you spend the most frivolous amount of money on?",
         "topics": ["personal", "money"]
     },
     {
-        "question": "What is the best thing you ever purchased that was under $50?",
+        "text": "What is the best thing you ever purchased that was under $50?",
         "topics": ["personal", "money"]
     },
     {
-        "question": "If you could change your career regardless if you have the talent, what would it be and why?",
+        "text": "If you could change your career regardless if you have the talent, what would it be and why?",
         "topics": ["personal", "jobs"]
     },
     {
-        "question": "What is the definition of success to you?",
+        "text": "What is the definition of success to you?",
         "topics": ["personal", "success"]
     },
     {
-        "question": "Would you rather change something in the past or find out what happens in the future?",
+        "text": "Would you rather change something in the past or find out what happens in the future?",
         "topics": ["personal", "time", "wouldyourather"]
     },
     {
-        "question": "If you could suffer no consequences from eating for a day, what would you eat and why?",
+        "text": "If you could suffer no consequences from eating for a day, what would you eat and why?",
         "topics": ["personal", "food"]
     },
     {
-        "question": "What life hack have you done that changed your life that you think would benefit others as well?",
+        "text": "What life hack have you done that changed your life that you think would benefit others as well?",
         "topics": ["personal", "selfhelp"]
     },
     {
-        "question": "At one point in your life did you realize you are no longer a kid and need to be an adult?",
+        "text": "At one point in your life did you realize you are no longer a kid and need to be an adult?",
         "topics": ["personal"]
     },
     {
-        "question": "What is one thing you do that others think is crazy?",
+        "text": "What is one thing you do that others think is crazy?",
         "topics": ["personal"]
     },
     {
-        "question": "If you had to move 3000 miles away, what one thing would you miss the most?",
+        "text": "If you had to move 3000 miles away, what one thing would you miss the most?",
         "topics": ["personal", "change"]
     },
     {
-        "question": "What's the best decision you ever made?",
+        "text": "What's the best decision you ever made?",
         "topics": ["personal"]
     },
     {
-        "question": "If you could relive yesterday, what would you do differently?",
+        "text": "If you could relive yesterday, what would you do differently?",
         "topics": ["personal", "time"]
     },
     {
-        "question": "What is something you don't like to do that you are still really good at?",
+        "text": "What is something you don't like to do that you are still really good at?",
         "topics": ["personal"]
     },
     {
-        "question": "In one year from today, how do you think your life will be different?",
+        "text": "In one year from today, how do you think your life will be different?",
         "topics": ["personal", "time"]
     },
     {
-        "question": "If I gave you $1000 that had to be spent today, what would you buy?",
+        "text": "If I gave you $1000 that had to be spent today, what would you buy?",
         "topics": ["personal", "money"]
     },
     {
-        "question": "Outside of Toastmasters, what do you love to practice?",
+        "text": "Outside of Toastmasters, what do you love to practice?",
         "topics": ["personal", "hobbies"]
     },
     {
-        "question": "What things in life should always be free?",
+        "text": "What things in life should always be free?",
         "topics": ["personal", "money"]
     },
     {
-        "question": "What is something you have always wanted since you were a kid?",
+        "text": "What is something you have always wanted since you were a kid?",
         "topics": ["personal"]
     },
     {
-        "question": "What are you an expert at?",
+        "text": "What are you an expert at?",
         "topics": ["personal"]
     },
     {
-        "question": "What questions do you often ask yourself?",
+        "text": "What questions do you often ask yourself?",
         "topics": ["personal"]
     },
     {
-        "question": "What is your favorite time of the year?",
+        "text": "What is your favorite time of the year?",
         "topics": ["personal", "time"]
     },
     {
-        "question": "In what way are you your own worst enemy?",
+        "text": "In what way are you your own worst enemy?",
         "topics": ["personal"]
     },
     {
-        "question": "What's one downside of the modern day world?",
+        "text": "What's one downside of the modern day world?",
         "topics": ["personal", "time"]
     },
     {
-        "question": "What simple fact do you wish more people understood?",
+        "text": "What simple fact do you wish more people understood?",
         "topics": ["personal"]
     },
     {
-        "question": "What have you lost interest in recently?",
+        "text": "What have you lost interest in recently?",
         "topics": ["personal", "hobbies"]
     },
     {
-        "question": "What job would you never do no matter how much it paid?",
+        "text": "What job would you never do no matter how much it paid?",
         "topics": ["personal", "work"]
     },
     {
-        "question": "What music do you listen to that lifts your spirits when you're feeling down?",
+        "text": "What music do you listen to that lifts your spirits when you're feeling down?",
         "topics": ["personal", "art", "music"]
     },
     {
-        "question": "If there was a movie about your life, what genre(s) would it be?",
+        "text": "If there was a movie about your life, what genre(s) would it be?",
         "topics": ["personal", "art", "movies"]
     },
     {
-        "question": "How would an extra $1000 a month change your life?",
+        "text": "How would an extra $1000 a month change your life?",
         "topics": ["personal", "money", "yanggang"]
     },
     {
-        "question": "When did you not speak up when you should have?",
+        "text": "When did you not speak up when you should have?",
         "topics": ["personal"]
     },
     {
-        "question": "What is your favorite quote?",
+        "text": "What is your favorite quote?",
         "topics": ["personal", "quotes"]
     },
     {
-        "question": "What was the last time you felt lucky?",
+        "text": "What was the last time you felt lucky?",
         "topics": ["personal"]
     },
     {
-        "question": "Has a dream ever changed your life? If so, what was it?",
+        "text": "Has a dream ever changed your life? If so, what was it?",
         "topics": ["personal", "dreams"]
     },
     {
-        "question": "What's something you recently learned about yourself?",
+        "text": "What's something you recently learned about yourself?",
         "topics": ["personal"]
     }
 ]

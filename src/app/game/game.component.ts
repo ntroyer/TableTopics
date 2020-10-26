@@ -63,8 +63,8 @@ export class GameComponent implements OnInit {
     return this.gameService.isTimerOn();
   }
 
-  getCurrentQuestion() {
-    return this.gameService.currentQuestion.question;
+  getCurrentQuestionText() {
+    return this.gameService.currentQuestion.text;
   }
 
   getNumQuestions() {

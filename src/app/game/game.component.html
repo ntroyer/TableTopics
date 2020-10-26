@@ -7,7 +7,7 @@
     <button mat-button *ngIf="hasQuestion()" (click)="removeQuestion()" [disabled]="isTimerOn() || getNumQuestions() <= 1">{{ getNumQuestions() > 1 ? "Remove Question From Game" : "No Questions to Remove"}}</button>
     <mat-card [@openCloseQuestion]="hasQuestion() ? 'open' : 'closed'">
         <h1>
-            {{hasQuestion() ? getCurrentQuestion() : 'Your question will be displayed here.'}}
+            {{hasQuestion() ? getCurrentQuestionText() : 'Your question will be displayed here.'}}
         </h1>
     </mat-card>
 </div>
@@ -18,7 +18,7 @@
     <ul>
         <li *ngFor="let player of gameService.players; index as i;">
             <h2>{{player.name}}</h2>
-            <p>{{player.question.question}}</p>
+            <p>{{player.question.text}}</p>
             <h4 *ngIf="player.time !== '00:00:00'">{{player.time}}</h4>
         </li>
     </ul>

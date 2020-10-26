@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import questions from '../questions/questions.json';
 
 export interface Question {
-  question: string;
+  text: string;
   topics: string[];
 }
 
@@ -28,11 +28,9 @@ export class GameService {
   public currentQuestion: Question = this.getNewQuestion();
   public prevQuestion: Question = this.getNewQuestion();
 
-  public players: Player[] = [];
+  public players: Player[] = this.createPlayersFromSession();
 
-  constructor() { 
-    this.createPlayersFromSession();
-  }
+  constructor() { }
 
   hasQuestion() {
     return this.isQuestionSet(this.currentQuestion);
@@ -47,17 +45,17 @@ export class GameService {
     }
 
     this.prevQuestion = randomQuestion;
-    this.gameQuestions = this.gameQuestions.filter(item => item.question !== this.prevQuestion.question);
+    this.gameQuestions = this.gameQuestions.filter(item => item.text !== this.prevQuestion.text);
   }
 
   removeQuestion() {
     this.prevQuestion = this.getNewQuestion();
-    this.gameQuestions = this.gameQuestions.filter(item => item.question !== this.currentQuestion.question);
+    this.gameQuestions = this.gameQuestions.filter(item => item.text !== this.currentQuestion.text);
     this.changeQuestion();
   }
 
   isQuestionSet(question: Question) {
-    return question.question !== '';
+    return question.text !== '';
   }
 
   hasPlayers() {
@@ -79,19 +77,24 @@ export class GameService {
 
   createPlayersFromSession() {
     const numplayers: number = +sessionStorage.getItem('numplayers');
+    const players: Player[] = [];
+
+    if (numplayers < 1) {
+      return players;
+    }
 
     for (let i = 1; i <= numplayers; i++) {
       const playername = sessionStorage.getItem('player' + i +  '_name');
-      const playerquestion = sessionStorage.getItem('player' + i + '_questiontext');
+      const playerquestiontext = sessionStorage.getItem('player' + i + '_questiontext');
       const playertime = sessionStorage.getItem('player' + i + '_time');
 
       const question = {
-        question: playerquestion, 
+        text: playerquestiontext, 
         topics: []
       }
 
       if (playername) {
-        this.players.push({
+        players.push({
           name: playername,
           question: question,
           time: playertime,
@@ -99,13 +102,14 @@ export class GameService {
         })
       }
     }
-    
+
+    return players;
   }
 
   storePlayerInSession(player: Player) {
     const playerCount = this.players.length;
     sessionStorage.setItem('player' + playerCount + "_name", player.name);
-    sessionStorage.setItem('player' + playerCount + "_questiontext", player.question.question);
+    sessionStorage.setItem('player' + playerCount + "_questiontext", player.question.text);
     sessionStorage.setItem('player' + playerCount + "_time", player.time);
     sessionStorage.setItem('numplayers', playerCount.toString());
   }
@@ -119,7 +123,7 @@ export class GameService {
   }
 
   getCurrentTimeAsString() {
-      return this.currentTimeString === '' ? this.defaultTimeString : this.currentTimeString;
+    return this.currentTimeString === '' ? this.defaultTimeString : this.currentTimeString;
   }
 
   setCurrentTimeAsString(time: string) {
@@ -127,8 +131,8 @@ export class GameService {
   }
 
   resetTimer() {
-      this.currentTime = 0;
-      this.currentTimeString = this.defaultTimeString;
+    this.currentTime = 0;
+    this.currentTimeString = this.defaultTimeString;
   }
 
   resetCurrentQuestion() {
@@ -136,7 +140,7 @@ export class GameService {
   }
 
   getNewQuestion() {
-    return { question: '', topics: [''] }
+    return { text: '', topics: [''] }
   }
 
   toggleTimerOn() {
