@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { GameService } from '../game/game.service';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  isToggleTimerChecked = this.gameService.showTimer;
 
-  constructor(public router: Router) { }
+  constructor(public router: Router, public gameService: GameService) { }
 
   ngOnInit(): void {
   }
@@ -16,6 +18,10 @@ export class HomeComponent implements OnInit {
   startGame() {
     this.clearPlayerStorage();
     this.router.navigate(['../game']);
+  }
+
+  toggleTimer(isChecked: boolean) {
+    this.gameService.showTimer = isChecked;
   }
 
   clearPlayerStorage() {

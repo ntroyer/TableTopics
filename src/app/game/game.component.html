@@ -11,7 +11,7 @@
         </h1>
     </mat-card>
 </div>
-<app-timer></app-timer>
+<app-timer *ngIf="gameService.showTimer"></app-timer>
 <div class="player-control">
     <button mat-button (click)="setupNewPlayer()" [disabled]="!hasQuestion() || isTimerOn()">New Participant</button>
     <button mat-button (click)="finish()" [disabled]="isTimerOn() || !hasPlayers()">Finish</button>

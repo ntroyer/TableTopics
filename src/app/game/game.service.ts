@@ -23,6 +23,8 @@ export class GameService {
   public currentTimeString = '';
   public defaultTimeString = '00:00:00';
   public timerOn = false;
+  public showTimer = true;
+  public noDuplicateQuestions = true;
 
   public gameQuestions: Question[] = questions;
   public currentQuestion: Question = this.getNewQuestion();
@@ -54,6 +56,11 @@ export class GameService {
     this.changeQuestion();
   }
 
+  removeDuplicateQuestion() {
+    this.prevQuestion = this.getNewQuestion();
+    this.gameQuestions = this.gameQuestions.filter(item => item.text !== this.currentQuestion.text);
+  }
+
   isQuestionSet(question: Question) {
     return question.text !== '';
   }
@@ -71,6 +78,11 @@ export class GameService {
     }
     this.players.push(player);
     this.storePlayerInSession(player);
+
+    if (this.noDuplicateQuestions) {
+      this.removeDuplicateQuestion();
+    }
+
     this.resetCurrentQuestion();
     this.resetTimer();
   }

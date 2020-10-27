@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { NgParticlesModule } from 'ng-particles';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +31,7 @@ import { FinishComponent } from './finish/finish.component';
     FormsModule,
     MatButtonModule,
     MatCardModule,
+    MatCheckboxModule,
     NgParticlesModule
   ],
   providers: [],

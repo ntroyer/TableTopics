@@ -2,6 +2,10 @@
 
 <h2>Welcome to Table Topics!</h2>
 
+<div class="options">
+    <input type="checkbox" name="toggle-timer" [checked]="isToggleTimerChecked" [(ngModel)]="isToggleTimerChecked" (change)="toggleTimer(isToggleTimerChecked ? true : false)">
+    <label for="toggle-timer">Play with Timer</label>
+</div>
 <div class="start-button">
     <button mat-button (click)="startGame()">Start</button>
 </div>
