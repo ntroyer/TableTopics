@@ -30,13 +30,8 @@ export class AppComponent {
         straight: true
       },
       number: {
-        density: {
-          enable: true,
-          area: 800,
-          factor: 1000
-        },
         limit: 0,
-        value: 3
+        value: 7
       },
       opacity: {
         animation: {

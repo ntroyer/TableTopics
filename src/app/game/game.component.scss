@@ -11,6 +11,9 @@
         margin: 10px auto;
         padding: 5px;
     }
+    li:nth-child(even) {
+        background-color: azure;
+    }
 
     button {
         margin: 2px;
