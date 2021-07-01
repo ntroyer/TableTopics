@@ -10,7 +10,7 @@ import { GameService } from '../game.service';
         backgroundColor: 'lightblue'
       })),
       state('green', style({
-        backgroundColor: 'lightgreen'
+        backgroundColor: 'green'
       })),
       state('yellow', style({
         backgroundColor: 'yellow'
@@ -64,6 +64,10 @@ export class TimerComponent implements OnInit {
   public interval: any;
   timerHidden = false;
 
+  timerOnText = 'Timer is On';
+  timerOffText = 'Timer is Off';
+  overtimeText = 'Overtime';
+
   greenTime = 60;
   yellowTime = 90;
   redTime = 120;
@@ -111,19 +115,18 @@ export class TimerComponent implements OnInit {
   }
 
   getTimerHiddenText() {
+    if (this.getTimerColor() === 'death') {
+      return this.overtimeText;
+    }
     if (this.gameService.isTimerOn()) {
-      return "Timer is On";
+      return this.timerOnText;
     }
 
-    return "Timer is Off";
+    return this.timerOffText;
   }
 
   getTimerColor() {
     let time = this.gameService.currentTime / 100;
-
-    if (this.isTimerHidden()) {
-      return 'early';
-    }
 
     if (time >= this.greenTime && time < this.yellowTime) {
       return 'green';
