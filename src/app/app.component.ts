@@ -11,6 +11,9 @@ export class AppComponent {
   particlesName = "tsparticles";
 
   particlesOptions = {
+    backgroundMode: {
+      enable: true
+    },
     background: {
       color: {
         value: "#FFFECB"
@@ -33,7 +36,7 @@ export class AppComponent {
           factor: 1000
         },
         limit: 0,
-        value: 2
+        value: 3
       },
       opacity: {
         animation: {
