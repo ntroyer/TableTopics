@@ -4,11 +4,10 @@
     ul {
         list-style: none;
         padding: 0;
+        border: 2px solid black;
     }
     li {
         background-color: lightblue;
-        border-radius: 5px;
-        margin: 10px auto;
         padding: 5px;
     }
     li:nth-child(even) {
@@ -27,13 +26,14 @@
 }
 
 .question-control {
-    font-size: 1.2vh;
+    font-size: 2vh;
 
     button {
         margin: 10px 2px;
     }
 
     mat-card {
+        border: 2px solid black;
         display: flex;
         height: 250px;
         align-items: center;

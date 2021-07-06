@@ -2,12 +2,11 @@
     ul {
         list-style: none;
         padding: 0;
+        border: 2px solid black;
     }
     li {
         background-color: lightblue;
-        margin: 10px;
         padding: 5px;
-        border-radius: 5px;
     }
     li:nth-child(even) {
         background-color: azure;
