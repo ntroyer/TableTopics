@@ -11,6 +11,7 @@ export class FinishComponent implements OnInit {
   constructor(public gameService: GameService) { }
 
   ngOnInit(): void {
+    this.gameService.setPlayers();
   }
 
 }

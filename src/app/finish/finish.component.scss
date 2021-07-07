@@ -4,6 +4,9 @@
         padding: 0;
         border: 2px solid black;
     }
+    ul:empty {
+        border: none;
+    }
     li {
         background-color: lightblue;
         padding: 5px;
