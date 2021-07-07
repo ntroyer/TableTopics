@@ -26,12 +26,11 @@ export class AppComponent {
       move: {
         direction: "right",
         enable: true,
-        speed: 3,
-        straight: true
+        speed: 3
       },
       number: {
         limit: 0,
-        value: 7
+        value: 15
       },
       opacity: {
         animation: {
@@ -49,9 +48,9 @@ export class AppComponent {
       size: {
         random: {
           enable: true,
-          minimumValue: 250
+          minimumValue: 200
         },
-        value: 350
+        value: 250
       }
     }
   }
