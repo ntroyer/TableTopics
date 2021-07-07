@@ -30,7 +30,7 @@ export class GameService {
   public currentQuestion: Question = this.getNewQuestion();
   public prevQuestion: Question = this.getNewQuestion();
 
-  public players: Player[] = this.createPlayersFromSession();
+  public players: Player[] = [];
 
   constructor() { }
 
@@ -87,7 +87,7 @@ export class GameService {
     this.resetTimer();
   }
 
-  createPlayersFromSession() {
+  getPlayersFromSession() {
     const numplayers: number = +sessionStorage.getItem('numplayers');
     const players: Player[] = [];
 
@@ -149,6 +149,10 @@ export class GameService {
 
   resetCurrentQuestion() {
     this.currentQuestion = this.getNewQuestion()
+  }
+
+  setPlayers() {
+    this.players = this.getPlayersFromSession();
   }
 
   getNewQuestion() {

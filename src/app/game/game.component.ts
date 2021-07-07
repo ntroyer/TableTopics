@@ -32,6 +32,7 @@ export class GameComponent implements OnInit {
   constructor(public gameService: GameService, public router: Router) { }
 
   ngOnInit(): void {
+    this.gameService.setPlayers();
   }
 
   changeQuestion() {
